@@ -1,6 +1,4 @@
-# Baseliner Japan API
-
- ##v0.9
+# Baseliner API Dev
 
 ## Description
 Baseliner API

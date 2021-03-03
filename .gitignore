@@ -1,6 +1,7 @@
 .DS_Store
 __pycache__/
 *.pyc
-readings.csv
+data-3tables.db
 metadata.csv
+readings.csv
 data-orig.db

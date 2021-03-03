@@ -26,7 +26,6 @@ class ReadingAdd(Resource):
 
 			#save reading to CSV file
 		with open("readings.csv", "a", ) as f:
-			print (data)
 			writer = csv.writer(f, delimiter=",")
 			writer.writerow([time.ctime(), data])
 

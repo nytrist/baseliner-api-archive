@@ -19,7 +19,6 @@ class ReadingModel(db.Model):
 #sensor station diagnostics
 
 	ss_id = db.Column(db.ForeignKey('stations.ss_id'))
-	#ss_num = db.Column(db.ForeignKey('stations.ss_num'))
 	#ss_id = db.Column(db.String(10))
 	ss_num = db.Column(db.Integer) # maybe remove...
 	ss_conn_att = db.Column(db.Integer)

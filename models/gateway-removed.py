@@ -8,15 +8,13 @@ class GatewayModel(db.Model):
 	gw_site = db.Column(db.String(20))
 	gw_locate = db.Column(db.String(20))
 
-	stations = db.relationship('StationModel', lazy='dynamic')
-
 	def __init__(self, gw_id, gw_site, gw_locate):
 		self.gw_id = gw_id
 		self.gw_site = gw_site
 		self.gw_locate = gw_locate
 
 	def json(self):
-		return{'gw_id': self.gw_id, 'gw_site': self.gw_site, 'gw_locate': self.gw_locate, 'stations': [station.json() for station in self.stations.all()]} #may need to remove .all() if too slow
+		return{'gw_id': self.gw_id, 'gw_site': self.gw_site, 'gw_locate': self.gw_locate} #may need to remove .all() if too slow
 
 #search by gateway ID
 	@classmethod

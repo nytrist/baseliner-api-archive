@@ -7,8 +7,8 @@ class ReadingModel(db.Model):
 	gw_date_time = db.Column(db.String(25))
 
 #gateway diagnostics
-	gw_id = db.Column(db.ForeignKey('gateways.gw_id'))
-	#gw_id = db.Column(db.String(20))
+	#gw_id = db.Column(db.ForeignKey('gateways.gw_id'))
+	gw_id = db.Column(db.String(20))
 	gw_rssi = db.Column(db.Integer)
 	ss_rssi = db.Column(db.Integer)
 	gw_conn_att = db.Column(db.Integer)

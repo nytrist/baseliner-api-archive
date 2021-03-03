@@ -7,8 +7,8 @@ class StationModel(db.Model):
 
 #Sensor Station Meta data - device id, site location, station number, location and sensor ids
 	ss_id = db.Column(db.String(20))
-	gw_id = db.Column(db.ForeignKey('gateways.gw_id'))
-	#gw_id = db.Column(db.String(20))
+	#gw_id = db.Column(db.ForeignKey('gateways.gw_id'))
+	gw_id = db.Column(db.String(20))
 	ss_site = db.Column(db.String(20))
 	ss_num = db.Column(db.Integer)
 	ss_locate = db.Column(db.String(20))

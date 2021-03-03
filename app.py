@@ -10,7 +10,7 @@ from resources.user import UserRegister
 
 from resources.reading import Reading, ReadingAdd, ReadingList
 from resources.station import Station, StationMod, StationList
-#from resources.gateway import Gateway, GatewayMod, GatewayList
+from resources.gateway import Gateway, GatewayMod, GatewayList
 
 app  = Flask(__name__)
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
@@ -26,18 +26,17 @@ jwt = JWT(app, authenticate, identity)
 CORS(app)
 
 #GET
-#api.add_resource(Gateway, '/gateway/<string:gw_id>') #returns specific gateway
+api.add_resource(Gateway, '/gateway/<string:gw_id>') #returns specific gateway
 api.add_resource(Station, '/station/<string:ss_id>') #returns individual sensor stations
 api.add_resource(Reading, '/reading/<string:reading_id>') #gets, deletes a specific reading
 
 #GET ALL
-#api.add_resource(GatewayList, '/gateways') # returns all gateways
-api.add_resource(StationList, '/') # returns all stations
-#api.add_resource(StationList, '/stations') # returns all sensor stations, index page of api
+api.add_resource(GatewayList, '/') # returns all gateways
+api.add_resource(StationList, '/stations') # returns all sensor stations, index page of api
 api.add_resource(ReadingList, '/readings') #returns all readings
 
 #Add reading, add, delete gateway and sensor statoin
-#api.add_resource(GatewayMod, '/gateway') #adds, deletes a gw
+api.add_resource(GatewayMod, '/gateway') #adds, deletes a gw
 api.add_resource(ReadingAdd, '/reading') #posts reading with data in body
 api.add_resource(StationMod, '/station') #adds, deletes a station
 

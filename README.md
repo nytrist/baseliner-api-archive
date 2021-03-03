@@ -1,9 +1,7 @@
-# Baseliner Japan API
-
- ##v0.9
+# Baseliner API Dev
 
 ## Description
-Baseliner API for Japan Set up
+Baseliner API
 This project is implemented using Flask, and is a REST API for the Baseliner Project
 
 Baseliner Dev:

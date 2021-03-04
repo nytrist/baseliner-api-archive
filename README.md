@@ -9,6 +9,7 @@ This project is implemented using Flask, and is a REST API for the Baseliner Pro
 Baseliner Dev:
 3 tables - Readings, Sensors, gateways
 SQLite db only
+deploying digital ocean
 
 ```
 code

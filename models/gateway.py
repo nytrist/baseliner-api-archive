@@ -4,7 +4,7 @@ class GatewayModel(db.Model):
 	__tablename__ = 'gateways'
 
 	id = db.Column(db.Integer, primary_key=True)
-	gw_id = db.Column(db.String(20), unique=True)
+	gw_id = db.Column(db.String(20))
 	gw_site = db.Column(db.String(20))
 	gw_locate = db.Column(db.String(20))
 

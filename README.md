@@ -1,15 +1,14 @@
 # Baseliner API
 
- ##v0.9
 
 ## Description
 Baseliner API
 This project is implemented using Flask, and is a REST API for the Baseliner Project
 
-Baseliner Dev:
+Baseliner Api
 3 tables - Readings, Sensors, gateways
-SQLite db only
-deploying digital ocean
+SQLite db
+Deployed Digital Ocean
 
 ```
 code

@@ -40,7 +40,7 @@ class ReadingAdd(Resource):
 			gw_rssi = data[2]
 			ss_rssi = data[3]
 			gw_conn_att = data[4]
-			gw_encl_temp = data[6]
+			gw_encl_temp = data[5]
 			gw_batt = data[6]
 			gw_solar_vol = data[7]
 

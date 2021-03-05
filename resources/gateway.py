@@ -14,10 +14,34 @@ class Gateway(Resource):
 		help='The gateway site cannot be left blank'
 		)
 
+	parser.add_argument('gw_addr',
+		type=int,
+		required=True,
+		help='The gateway address cannot be left blank'
+		)
+
 	parser.add_argument('gw_locate',
 		type=str,
 		required=True,
 		help='The gateway location cannot be left blank'
+		)
+
+	parser.add_argument('gw_url',
+		type=str,
+		required=True,
+		help='The gateway url cannot be left blank'
+		)
+
+	parser.add_argument('gw_dir',
+		type=str,
+		required=True,
+		help='The gateway url directory cannot be left blank'
+		)
+
+	parser.add_argument('gw_port',
+		type=int,
+		required=True,
+		help='The gateway url port cannot be left blank'
 		)
 
 	def get(self, gw_id):
@@ -56,10 +80,14 @@ class GatewayMod(Resource):
 		gateway = GatewayModel.find_by_id(gw_id)
 
 		if gateway is None:
-			gateway = GatewayModel(gw_id, data['gw_site'], data['gw_locate'])
+			gateway = GatewayModel(gw_id, data['gw_site'], data['gw_addr'], data['gw_locate'], data['gw_url'], data['gw_dir'], data['gw_port'])
 		else:
 			gateway.gw_site = data['gw_site']
+			gateway.gw_addr = data['gw_addr']
 			gateway.gw_locate = data['gw_locate']
+			gateway.gw_url = data['gw_url']
+			gateway.gw_dir = data['gw_dir']
+			gateway.gw_port = data['gw_port']
 
 		gateway.save_to_db()
 
